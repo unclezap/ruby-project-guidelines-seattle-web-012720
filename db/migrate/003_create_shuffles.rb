@@ -5,7 +5,7 @@ class CreateShuffles < ActiveRecord::Migration[5.2]
             t.belongs_to :card
             t.boolean :on_board
             t.boolean :in_deck
-            t.boolean :taken
+            t.string :taken
         end
     end
 end
