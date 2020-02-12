@@ -55,10 +55,10 @@ third_seed_array = third_seed.split(',').map {|s| s.to_i}
 fourth_seed = num_list.shuffle.join(',')
 fourth_seed_array = fourth_seed.split(',').map {|s| s.to_i}
 
-test_seed_1 = List.create({rand_seed: first_seed, game_id: 1)
-test_seed_2 = List.create({rand_seed: second_seed, game_id: 2})
-test_seed_3 = List.create({rand_seed: third_seed, game_id: 3)
-test_seed_4 = List.create({rand_seed: fourth_seed, game_id: 4})
+test_list_1 = List.create({rand_seed: first_seed, game_id: 1)
+test_list_2 = List.create({rand_seed: second_seed, game_id: 2})
+test_list_3 = List.create({rand_seed: third_seed, game_id: 3)
+test_list_4 = List.create({rand_seed: fourth_seed, game_id: 4})
 
 test_game_1 = Game.create({player_id: 1, tricks_taken: 20, tricks_lost: 5})
 test_game_2 = Game.create({player_id: 1, tricks_taken: 0, tricks_lost: 12})
@@ -68,6 +68,7 @@ test_game_4 = Game.create({player_id: 2, tricks_taken 13, tricks_lost: 13})
 #make some keys to identify taken sets and set start values for some useful variables
 i = 0
 in_play = true
+drawn = true
 set_keys_array = []
 50.times do
     player_set_keys_array << (rand()*9999999).round.to_s(16)
@@ -75,42 +76,155 @@ set_keys_array = []
 50.times do
     computer_set_keys_array << (rand()*-9999999).round.to_s(16)
     end
-taken_keys = ["hi"]
+taken_keys = []
 player_keys_index = 0
+player_set_keys_array = []
 computer_keys_index = 0
+computer_set_keys_array = []
 
-#shuffle for first game
-20.times do
-    taken_keys << player_set_keys_array[player_keys_index]
-    player_keys_index += 1
+##shuffle for first game
+#first make the set keys for first shuffle
+2.times do
+    3.times do
+        taken_keys << nil
+    end
 end
 5.times do
-    taken_keys << computer_set_keys_array[computer_keys_index]
+    3.times do
+        taken_keys << computer_set_keys_array[computer_keys_index]
+    end
     computer_keys_index += 1
 end
+20.times do
+    3.times do
+        taken_keys << player_set_keys_array[player_keys_index]
+    end
+    player_keys_index += 1
+end
+
+#then set card states for first shuffle
 81.times do
     if i < 74
         in_play = false
     else
         in_play = true
     end
-    if i < 60
-        taken_key =  
     Shuffle.create({
         game_id: 1,
         card_id: first_seed_array[i],
         on_board: in_play,
-        in_deck: !in_play,
-        taken: 
+        in_deck: false,
+        taken: taken_keys.pop
     })
+    i += 1
 end 
 
 
-#shuffle for second game
-test_shuffle_2 = 
+##shuffle for second game
+#first keys for 2nd
+15.times do
+    3.times do
+        taken_keys << nil
+    end
+end
+12.times do
+    3.times do
+        taken_keys << computer_set_keys_array[computer_keys_index]
+    end
+    computer_keys_index += 1
+end
 
-#shuffle for third game
-test_shuffle_3 = 
+#then card states for 2nd
+i = 0
+81.times do
+    if i < 36
+        in_play = false
+        drawn = false
+    elsif i < 48
+        in_play =  true
+        drawn = false
+    else
+        in_play = false
+        drawn = true
+    end
+    Shuffle.create({
+        game_id: 1,
+        card_id: second_seed_array[i],
+        on_board: in_play,
+        in_deck: drawn,
+        taken: taken_keys.pop,
+    })
+    i += 1
+end 
+
+##shuffle for third game
+#first keys for 3rd
+3.times do
+    3.times do
+        taken_keys << nil
+    end
+end
+14.times do
+    3.times do
+        taken_keys << computer_set_keys_array[computer_keys_index]
+    end
+    computer_keys_index += 1
+end
+10.times do
+    3.times do
+        taken_keys << player_set_keys_array[player_keys_index]
+    end
+    player_keys_index += 1
+end
+
+#then card states for 3rd
+i = 0
+81.times do
+    if i < 71
+        in_play = false
+    else
+        in_play = true
+    end
+    Shuffle.create({
+        game_id: 1,
+        card_id: third_seed_array[i],
+        on_board: in_play,
+        in_deck: false,
+        taken: taken_keys.pop,
+    })
+    i += 1
+end
 
 #shuffle for fourth game
-test_shuffle_4 = 
+3.times do
+    taken_keys << nil
+end
+13.times do
+    3.times do
+        taken_keys << computer_set_keys_array[computer_keys_index]
+    end
+    computer_keys_index += 1
+end
+13.times do
+    3.times do
+        taken_keys << player_set_keys_array[player_keys_index]
+    end
+    player_keys_index += 1
+end
+
+#then set card states for fourth
+81.times do
+    if i < 78
+        in_play = false
+    else
+        in_play = true
+    end
+    shuffle << {
+        game_id: 1,
+        card_id: fourth_seed_array[i],
+        on_board: in_play,
+        in_deck: false,
+        taken: taken_keys.pop
+    }
+    i += 1
+end 
