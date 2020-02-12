@@ -131,6 +131,7 @@ i = 0
     })
     test_game_1.shuffles << shuffle_cut
     Card.all[i].shuffles << shuffle_cut
+    test_list_1.shuffles << shuffle_cut
     i += 1
 end 
 
@@ -169,6 +170,7 @@ i = 0
     })
     test_game_2.shuffles << shuffle_cut
     Card.all[i].shuffles << shuffle_cut
+    test_game_2.shuffles << shuffle_cut
     i += 1
 end 
 
@@ -207,6 +209,7 @@ i = 0
     })
     test_game_3.shuffles << shuffle_cut
     Card.all[i].shuffles << shuffle_cut
+    test_game_2.shuffles << shuffle_cut
     i += 1
 end
 
@@ -242,5 +245,6 @@ i = 0
     })
     test_game_4.shuffles << shuffle_cut
     Card.all[i].shuffles << shuffle_cut
+    test_game_4.shuffles << shuffle_cut
     i += 1
 end 
