@@ -66,14 +66,14 @@ class DeleteRecord
                     i = 0
                     num_games.times do
                         w = i + 1
-                        puts "#{w}. Game id \#GS#{games_for_deletion[i][:id]}q2 - #{games_for_deletion[i][:tricks_taken]} tricks taken, #{games_for_deletion[i][:tricks_lost]}.  Difficulty: #{games_for_deletion[i][:difficulty]}"
+                        puts "#{w}. Game id \#GS#{games_for_deletion[i][:id]}q2 - #{games_for_deletion[i][:tricks_taken]} tricks taken, #{games_for_deletion[i][:tricks_lost]} tricks lost.  Difficulty: #{games_for_deletion[i][:difficulty]}"
                         i += 1
                     end
                     puts "Enter a number to delete that game."
                     delete_choice = gets.chomp
                     delete_choice_index = delete_choice.to_i - 1
                     # binding.pry
-                    if delete_choice_index < games_for_deletion.length
+                    if delete_choice_index < games_for_deletion.length && delete_choice_index > -1
                         game_on_the_chopping_block = games_for_deletion[delete_choice_index]
                         puts "Choice #{delete_choice}.  Is this correct?"
                         delete_all_correct = gets.chomp

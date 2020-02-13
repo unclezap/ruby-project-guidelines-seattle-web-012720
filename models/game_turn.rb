@@ -1,6 +1,7 @@
 class GameTurn
     def self.run(game)
-        DrawACard.run
+        # @game = game
+        DrawACard.run(game)
         #[    Wait Until Unless function
             # x = Time.now
 

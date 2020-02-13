@@ -91,9 +91,56 @@ class PlayGame
     end
 
     def self.start_game
+        if @current_player.games.length > 0
+            unfinished_games = @current_player.games.find_all {|game| game[:game_result] == nil}
+            num_unfinished_games = unfinished_games.length
+            if num_unfinished_games > 0
+                puts `clear`
+                puts ""
+                puts "Do you want to play an old game?"
+                old_game = gets.strip.downcase
+                if old_game[0] == "y"
+                
+                    i = 0
+                    num_unfinished_games.times do
+                        w = i + 1
+                        puts "#{w}. Game id \#GS#{unfinished_games[i][:id]}q2 - #{unfinished_games[i][:tricks_taken]} tricks taken, #{unfinished_games[i][:tricks_lost]} tricks lost.  Difficulty: #{unfinished_games[i][:difficulty]}"
+                        i += 1
+                    end
+                    puts "Enter a number to select that game."
+                    old_game_choice = gets.chomp
+                    old_game_choice_index = old_game_choice.to_i - 1
+                    if old_game_choice_index < num_unfinished_games && old_game_choice_index > -1
+                        game = unfinished_games[old_game_choice_index]
+                        puts "Choice #{old_game_choice}.  Is this correct?"
+                        old_game_choice_correct = gets.chomp
+                        if old_game_choice_correct[0] != "y"
+                            puts "Something's wrong.  Let's try again"
+                            PlayGame.start_game
+                        else
+                            binding.pry
+                            GameTurn.run(game)
+                        end
+                    else
+                        puts "Something's wrong.  Let's try again"
+                        sleep(2)
+                        PlayGame.start_game
+                    end
+
+                elsif old_game[0] == "n"
+                    puts "Cool."
+                    sleep(2)
+                else
+                    puts "I'm not sure what you mean."
+                    sleep(2)
+                    PlayGame.start_game
+                end
+            end
+        end
+
         puts `clear`
         puts ""
-        puts "Cool.  What difficulty do you want?"
+        puts "What difficulty do you want?"
         puts "1. Easy"
         puts "2. Medium"
         puts "3. Hard"
