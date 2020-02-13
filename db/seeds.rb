@@ -43,10 +43,10 @@ test_player_2 = Player.create({name: "Meghraj", tagline: "Hi hero"})
 test_player_3 = Player.create({name: "Yamcha", tagline: "AAAAAAAAAAAAHHHH"})
 
 #make test games
-test_game_1 = Game.create({tricks_taken: 20, tricks_lost: 5}) 
-test_game_2 = Game.create({tricks_taken: 0, tricks_lost: 12})
-test_game_3 = Game.create({tricks_taken: 10, tricks_lost: 14})
-test_game_4 = Game.create({tricks_taken: 13, tricks_lost: 13})
+test_game_1 = Game.create({tricks_taken: 20, tricks_lost: 5, game_result: "win", difficulty: 30}) 
+test_game_2 = Game.create({tricks_taken: 0, tricks_lost: 12, game_result: nil, difficulty: 30})
+test_game_3 = Game.create({tricks_taken: 10, tricks_lost: 14, game_result: "loss", difficulty: 10})
+test_game_4 = Game.create({tricks_taken: 13, tricks_lost: 13, game_result: "draw", difficulty: 10})
 
 #assign test games to test players
 test_player_1.games << test_game_1
