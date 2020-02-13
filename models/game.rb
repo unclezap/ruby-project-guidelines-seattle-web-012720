@@ -51,12 +51,16 @@ class Game < ActiveRecord::Base
         new_game[:tricks_taken] = 0
         new_game[:tricks_lost] = 0
         new_game[:difficulty] = difficulty
-        player.games = self
+        player.games << new_game
         new_game.save
-        new_list = List.create_with_relationships(self)
-        self.list = new_list
+        List.create_with_relationships(new_game)
+        new_list = List.all.last
+        # binding.pry
+        new_game.list = new_list
         i = 0
+        # binding.pry
         81.times do
+            # binding.pry
             if i < 12
                 in_play = true
                 in_deck = false
@@ -64,15 +68,21 @@ class Game < ActiveRecord::Base
                 in_play = false
                 in_deck = true
             end
-            card_index = new_list[i][:rand_seed]
+            # binding.pry
+            new_list = List.all.last
+            # binding.pry
+            card_index_string = new_list[:rand_seed]
+            card_index_array = card_index_string.split(',').map {|s| s.to_i}
+            card_index = card_index_array[i]
+            # binding.pry
             card = Card.all[card_index]
-            Shuffle.create_with_relationships(in_play, in_deck, self, new_list, card)
+            Shuffle.create_with_relationships(in_play, in_deck, new_game, new_list, card)
+            new_game.shuffles << Shuffle.all.last
+            card.shuffles << Shuffle.all.last
+            new_list.shuffles << Shuffle.all.last
             i += 1
         end        
-        # t.integer "tricks_taken"
-        # t.integer "tricks_lost"
-        # t.string "game_result"
-        # t.integer "difficulty"
-    binding.pry
+
+    # binding.pry
     end
 end

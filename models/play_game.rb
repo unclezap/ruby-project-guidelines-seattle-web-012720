@@ -35,6 +35,7 @@ class PlayGame
             end
 
             current_player = Player.create(name: player_name, tagline: player_tagline)
+            @current_player = current_player
             PlayGame.start_game
         elsif play_menu_choice[0] == "2" || play_menu_choice == "two"
             i_am_correct = "no"
@@ -65,6 +66,7 @@ class PlayGame
                     sleep(2)
                 end
             end
+            @current_player = current_player
             PlayGame.start_game
         elsif play_menu_choice[0] == "3" || play_menu_choice == "three" || play_menu_choice == "return"
             StartMenu.run
@@ -117,8 +119,8 @@ class PlayGame
         puts `clear`
         puts "Good luck!"
         sleep(1)
-        binding.pry
-        Game.create_with_relationships(current_player, difficulty)
-        binding.pry
+        # binding.pry
+        Game.create_with_relationships(@current_player, difficulty)
+        GameTurn.run
     end
 end
