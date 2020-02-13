@@ -6,8 +6,8 @@ class StartMenu
         puts "-----------------------"
         puts "1. Play a game NOT BUILT"
         puts "2. View stats NOT BUILT"
-        puts "3. Delete records NOT BUILT"
-        puts "4. Play in the class of sets NOT BUILT"
+        puts "3. Delete records"
+        puts "4. Change your tagline"
         puts "Press q to quit"
 
         start_menu_choice = gets.strip.downcase
@@ -24,6 +24,8 @@ class StartMenu
         elsif start_menu_choice[0] == "3" || start_menu_choice == "three"
             DeleteRecords.run
         elsif start_menu_choice[0] == "4" || start_menu_choice == "four"
+            ChangeTagline.run
+        elsif start_menu_choice[0] == "5" || start_menu_choice == "five"
             ClassOfSets.run
         else
             puts `clear`
