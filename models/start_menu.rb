@@ -20,13 +20,13 @@ class StartMenu
         elsif start_menu_choice[0] == "1" || start_menu_choice == "one"
             PlayGame.run
         elsif start_menu_choice[0] == "2" || start_menu_choice == "two"
-            ViewStats.run
+            ViewStat.run
         elsif start_menu_choice[0] == "3" || start_menu_choice == "three"
-            DeleteRecords.run
+            DeleteRecord.run
         elsif start_menu_choice[0] == "4" || start_menu_choice == "four"
             ChangeTagline.run
         elsif start_menu_choice[0] == "5" || start_menu_choice == "five"
-            ClassOfSets.run
+            ClassOfSet.run
         else
             puts `clear`
             puts "Let's try that again"
