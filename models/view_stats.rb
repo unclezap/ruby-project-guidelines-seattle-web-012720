@@ -60,6 +60,5 @@ class ViewStats
         end
 
         sleep(2)
-        StartMenu.run
     end
 end

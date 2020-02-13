@@ -19,7 +19,6 @@ class Game < ActiveRecord::Base
         puts "The high score is #{highest}, which was achieved by #{self.all[highest_index].player[:name]}"
         @highest = highest
         self.score_message
-
     end
     
     def self.score_message
@@ -45,6 +44,35 @@ class Game < ActiveRecord::Base
         2.times {puts ""}
         puts "Press enter to continue"
         gets
-        ViewStats.run
+    end
+
+    def self.create_with_relationships(player, difficulty)
+        new_game = Game.new
+        new_game[:tricks_taken] = 0
+        new_game[:tricks_lost] = 0
+        new_game[:difficulty] = difficulty
+        player.games = self
+        new_game.save
+        new_list = List.create_with_relationships(self)
+        self.list = new_list
+        i = 0
+        81.times do
+            if i < 12
+                in_play = true
+                in_deck = false
+            else
+                in_play = false
+                in_deck = true
+            end
+            card_index = new_list[i][:rand_seed]
+            card = Card.all[card_index]
+            Shuffle.create_with_relationships(in_play, in_deck, self, new_list, card)
+            i += 1
+        end        
+        # t.integer "tricks_taken"
+        # t.integer "tricks_lost"
+        # t.string "game_result"
+        # t.integer "difficulty"
+    binding.pry
     end
 end

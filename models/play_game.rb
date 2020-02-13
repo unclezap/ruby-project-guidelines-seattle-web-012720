@@ -34,8 +34,8 @@ class PlayGame
                 end
             end
 
-            Player.create(name: player_name, tagline: player_tagline)
-            PlayGame.run
+            current_player = Player.create(name: player_name, tagline: player_tagline)
+            PlayGame.start_game
         elsif play_menu_choice[0] == "2" || play_menu_choice == "two"
             i_am_correct = "no"
             while i_am_correct[0] != "y" do
@@ -53,7 +53,8 @@ class PlayGame
                 puts `clear`
                 old_player_index = i_am.to_i - 1
                 if old_player_index < Player.all.length
-                    puts Player.all[old_player_index][:name]
+                    current_player = Player.all[old_player_index]
+                    puts current_player[:name]
                     puts "Is this correct?"
                     i_am_correct = gets.chomp
                     if i_am_correct[0] != "y"
@@ -117,7 +118,7 @@ class PlayGame
         puts "Good luck!"
         sleep(1)
         binding.pry
-        Game.fully_create
+        Game.create_with_relationships(current_player, difficulty)
         binding.pry
     end
 end
