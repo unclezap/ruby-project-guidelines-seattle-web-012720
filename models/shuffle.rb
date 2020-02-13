@@ -8,9 +8,6 @@ class Shuffle < ActiveRecord::Base
         new_shuffle[:on_board] = in_play
         new_shuffle[:in_deck] = in_deck
         new_shuffle[:taken] = nil
-        # game.shuffles << new_shuffle
-        # card.shuffles << new_shuffle
-        # list.shuffles << new_shuffle
         new_shuffle.save
     end
 end

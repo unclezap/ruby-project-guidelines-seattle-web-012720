@@ -8,7 +8,6 @@ class StartMenu
         puts "2. View stats NOT BUILT"
         puts "3. Delete records NOT BUILT"
         puts "4. Play in the class of sets NOT BUILT"
-        puts "5. Debug mode NOT BUILT"
         puts "Press q to quit"
 
         start_menu_choice = gets.strip.downcase
@@ -26,10 +25,6 @@ class StartMenu
             DeleteRecords.run
         elsif start_menu_choice[0] == "4" || start_menu_choice == "four"
             ClassOfSets.run
-        elsif start_menu_choice[0] == "5" || start_menu_choice == "five"
-            puts "Debug mode NOT BUILT"
-            sleep(3)
-            StartMenu.run
         else
             puts `clear`
             puts "Let's try that again"

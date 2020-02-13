@@ -60,6 +60,7 @@ class PlayGame
                     i_am_correct = gets.chomp
                     if i_am_correct[0] != "y"
                         puts "Something's wrong. Let's try again"
+                        sleep(2)
                     end
                 else
                     puts "Something's wrong.  Let's try again"
@@ -112,15 +113,20 @@ class PlayGame
             difficulty = difficulty_string.to_i
             if difficulty < 2 || difficulty > 300
                 puts "That seems crazy.  I'm going to give you 30."
+                sleep(3)
                 difficulty = 30
             end
         else
+            puts "Huh?"
+            sleep(2)
+            PlayGame.start_game
         end
         puts `clear`
         puts "Good luck!"
         sleep(1)
         # binding.pry
         Game.create_with_relationships(@current_player, difficulty)
-        GameTurn.run
+        game = Game.all.last
+        GameTurn.run(game)
     end
 end

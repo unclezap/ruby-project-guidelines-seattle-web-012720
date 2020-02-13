@@ -85,4 +85,5 @@ class Game < ActiveRecord::Base
 
     # binding.pry
     end
+
 end
