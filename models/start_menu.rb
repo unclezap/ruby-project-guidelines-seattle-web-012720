@@ -15,6 +15,7 @@ class StartMenu
 
         if start_menu_choice[0] == "q" || start_menu_choice == "exit"
             begin
+                puts `clear`
                 abort "Thanks for playing"
             end
         elsif start_menu_choice[0] == "1" || start_menu_choice == "one"
