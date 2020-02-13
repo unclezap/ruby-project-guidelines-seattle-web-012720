@@ -61,7 +61,7 @@ class Game < ActiveRecord::Base
         # binding.pry
         81.times do
             # binding.pry
-            if i < 12
+            if i < 11
                 in_play = true
                 in_deck = false
             else
