@@ -14,6 +14,7 @@ class ViewStats
         puts "Press q to quit"
 
         stats_menu_choice = gets.strip.downcase
+
         if stats_menu_choice[0] == "1" || stats_menu_choice == "one"
             Game.high_score
             gets
@@ -23,6 +24,7 @@ class ViewStats
             gets
             ViewStats.run
         elsif stats_menu_choice[0] == "3" || stats_menu_choice == "three"
+            puts `clear`
             puts ""
             puts "Players have played #{Game.all.length} games!"
             gets
@@ -44,9 +46,11 @@ class ViewStats
         elsif stats_menu_choice[0] == "q" || stats_menu_choice == "exit"
                 begin
                     puts `clear`
-                    abort "Thanks for playing"
-                rescue SystemExit
+                    puts "Thanks for playing"
                     puts "Bye"
+                    exit!
+                rescue SystemExit
+                    
                 end
         else
             puts `clear`
@@ -55,6 +59,7 @@ class ViewStats
             ViewStats.run            
         end
 
+        sleep(2)
         StartMenu.run
     end
 end
