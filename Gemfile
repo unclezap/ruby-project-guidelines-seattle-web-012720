@@ -8,5 +8,6 @@ gem "pry"
 gem "require_all"
 gem "rmagick", "~> 2.16.0"
 gem 'catpix'
+gem 'colorize'
 # gem "timeout"
 # gem "bundler"
