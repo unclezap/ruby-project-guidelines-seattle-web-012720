@@ -1,11 +1,14 @@
 class ComputerTake
     def self.run(game, board, winning_sets)
-
+        # binding.pry
+        if winning_sets == nil
+            GameTurn.run(game)
+        end
         i = winning_sets.length
         i = i * rand()
         i = i.round()
         set_taken = winning_sets[i]
-        DisplayBoard.highlight_set(board, set_taken)
+        DisplayBoard.highlight_set(game, board, set_taken)
         sleep(4)
 
         #seven digit key is necessary to give <1% chance of matching keys in the same game over 100 games where one player takes all sets. Basically a birthday problem
@@ -30,6 +33,16 @@ class ComputerTake
 
         game[:tricks_lost] += 1
         game.save
+
+        cards = game.shuffles
+        cards_in_deck = cards.find_all do |card|
+            card[:in_deck] == true
+        end
+        remaining_sets = CalculatePossibleSet.run(board)
+        if remaining_sets == nil && cards_in_deck == nil
+            WinLoseDraw.rb
+        end
+
         DrawThree.run(game)
     end
 end

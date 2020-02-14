@@ -80,5 +80,15 @@ class CalculatePossibleSet
             result_array << mini_result.sort_by {|mini_result| mini_result[:id]}
         end
         final_results = result_array.uniq
+        
+
+        if final_results == nil
+            binding.pry
+        end
+
+        final_results
+        # if final_results.length == 0 || final_results == [] or final_results == nil
+        #     binding.pry
+        # end
     end
 end

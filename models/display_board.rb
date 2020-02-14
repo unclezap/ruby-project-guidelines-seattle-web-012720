@@ -7,9 +7,9 @@ class DisplayBoard
         image = ""
         num_assignments.times do
             #bugcatcher
-            if set[0] == nil || set[1] == nil || set[2] == nil || set.length != 3
-                binding.pry
-            end
+            # if set[0] == nil || set[1] == nil || set[2] == nil || set.length != 3
+            #     binding.pry
+            # end
             catcher = board_array[i]
             if catcher.card == nil
                 binding.pry
@@ -94,7 +94,7 @@ class DisplayBoard
         puts image
     end
     
-    def self.highlight_set(board_array,set)
+    def self.highlight_set(game, board_array,set)
         puts `clear`
         num_assignments = board_array.length
         # card_images = []
@@ -102,13 +102,11 @@ class DisplayBoard
         image = ""
         num_assignments.times do
             #bugcatcher
-            if set[0] == nil || set[1] == nil || set[2] == nil || set.length != 3
-                binding.pry
-            end
-            catcher = board_array[i]
-            if catcher.card == nil
-                binding.pry
-            end
+            if set == nil
+                # binding.pry
+
+                GameTurn.run(game)
+            else                     
 
             if board_array[i].card[:color] == 1 && board_array[i].card != set[0] && board_array[i].card != set[1] && board_array[i].card != set[2]
                 if board_array[i].card[:number] == 1
@@ -209,8 +207,12 @@ class DisplayBoard
             end
             i += 1
         end
+
+        end
+
+
         puts image
         puts "Computer's set in white"
-        sleep(2)
+        # sleep(2)
     end
 end

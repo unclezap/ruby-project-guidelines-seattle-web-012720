@@ -1,7 +1,7 @@
 require_relative '../config/environment'
 require 'timeout'
 
-binding.pry
+# binding.pry
 StartMenu.run
 
 puts `clear`

@@ -11,7 +11,9 @@ class ChangeTagline
             i = 0
             num_players.times do
                 w = i + 1
-                puts "#{w}. #{Player.all[i][:name]} #{Player.all[i][:tagline]}"
+                puts "#{w}. #{Player.all[i][:name]}"
+                puts "#{Player.all[i][:tagline]}"
+                puts ""
                 i += 1            
             end
             puts "Which player are you? Pick a number."

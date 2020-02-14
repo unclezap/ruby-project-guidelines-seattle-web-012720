@@ -5,7 +5,7 @@ class PlayerTake
         if match
             
             #seven digit key is necessary to give <1% chance of matching keys in the same game over 100 games where one player takes all sets. Basically a birthday problem
-            DisplayBoard.highlight_set(board,guess)
+            DisplayBoard.highlight_set(game, board,guess)
 
             set_key = 9999999 * rand()
             set_key = set_key.round().to_s(16)
@@ -32,6 +32,7 @@ class PlayerTake
             DrawThree.run(game)
         elsif
             puts "Oh no! That's not a set.  The computer found one though."
+            # sleep(0)
             sleep(5)
             ComputerTake.run(game, winning_sets)
         end

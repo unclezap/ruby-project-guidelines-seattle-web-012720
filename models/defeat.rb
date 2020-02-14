@@ -3,5 +3,6 @@ class Defeat
         puts `clear`
         puts "Defeat"
         puts ":("
+        gets
     end
 end

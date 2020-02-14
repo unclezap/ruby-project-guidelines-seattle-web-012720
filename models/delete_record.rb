@@ -134,7 +134,6 @@ class DeleteRecord
             yes_sure = "no"
             while yes_sure[0] != "y"
                 if tagline_guess == player_tagline_stripped
-                    binding.pry
                     puts "Yep, that's you alright.  \"#{player_tagline}\", that's what #{is_this_the_right_person[:name]} always used to say."
                     puts ""
                     puts "...are you sure about this?  No one built out any functionality to restore deleted records."
@@ -153,21 +152,19 @@ class DeleteRecord
                     "Good try, buddy."
                     yes_sure = "yes"
                     sleep(2)
-                    DeleteRecords.run
+                    DeleteRecord.run
                 end
             end
             puts "Working on deleting all your records right now"
-            binding.pry
             is_this_the_right_person.destroy
             puts "Successfully deleted!"
-            binding.pry
             sleep(2)
-            DeleteRecords.run
+            DeleteRecord.run
         else
             puts `clear`
             puts "Let's try that again"
             sleep(3)
-            DeleteMenu.run            
+            DeleteRecord.run            
         end
         # binding.pry
     end

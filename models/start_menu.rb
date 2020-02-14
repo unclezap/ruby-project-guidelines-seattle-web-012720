@@ -9,6 +9,7 @@ class StartMenu
         puts "3. Delete records"
         puts "4. Change your tagline"
         puts "5. Quickrun"
+        puts "6. Example of a set"
         puts "Press q to quit"
 
         start_menu_choice = gets.strip.downcase

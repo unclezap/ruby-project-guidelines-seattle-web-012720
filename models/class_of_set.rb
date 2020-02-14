@@ -1,7 +1,11 @@
 class ClassOfSet
     def self.run
-        puts "Class of set NOT BUILT"
-        sleep(3)
+        puts `clear`
+        puts "Example set"
+        puts "1 A #".red
+        puts "2 A #".blue
+        puts "3 A #".yellow
+        gets
         StartMenu.run
     end
 end

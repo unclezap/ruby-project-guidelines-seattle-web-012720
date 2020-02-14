@@ -13,7 +13,8 @@ class GameTurn
         rand_time = y + z.round()
         
         begin
-            status = Timeout::timeout(rand_time) do
+            status = Timeout::timeout(1) do 
+            # status = Timeout::timeout(rand_time) do
                 DisplayBoard.run(board)
                 puts "Choose your cards: "
                 guess = gets.chomp
