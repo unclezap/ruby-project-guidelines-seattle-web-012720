@@ -1,9 +1,10 @@
 class GameTurn
     def self.run(game)
         # @game = game
-        DrawACard.run(game)
+        draw_results = DrawACard.run(game)
+        binding.pry
         #[    Wait Until Unless function
-            # x = Time.now
+            x = Time.now
 
             # require 'timeout'
             # y = 10
@@ -19,7 +20,7 @@ class GameTurn
             # puts "Time.now is #{Time.now}"
             # end
         # ]
-        ComputerTake.run || PlayerTake.run
+        # ComputerTake.run(game, set) || PlayerTake.run(game, set)
         
         GameTurn.run
     end

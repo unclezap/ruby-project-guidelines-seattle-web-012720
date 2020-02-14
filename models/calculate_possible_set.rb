@@ -80,6 +80,5 @@ class CalculatePossibleSet
             result_array << mini_result.sort_by {|mini_result| mini_result[:id]}
         end
         final_results = result_array.uniq
-        binding.pry5
     end
 end

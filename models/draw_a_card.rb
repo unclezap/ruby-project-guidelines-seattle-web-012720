@@ -4,7 +4,6 @@ class DrawACard
         cards_in_deck = cards.find_all do |card|
             card[:in_deck] == true
         end
-        # binding.pry
         if cards_in_deck == nil
             binding.pry
             WinLoseDraw.run(game)
@@ -14,7 +13,8 @@ class DrawACard
         cards_on_board = cards.find_all do |card|
             card[:on_board] == true
         end
-        binding.pry
-        CalculatePossibleSet(cards_on_board).run
+        winning_sets = CalculatePossibleSet.run(cards_on_board)
+        return_array = {board: cards_on_board, takes: winning_sets}
+        return_array
     end
 end
