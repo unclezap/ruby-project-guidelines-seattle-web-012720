@@ -14,7 +14,7 @@ class GameTurn
                 puts "Choose your cards: "
                 guess = gets.chomp
                 if guess
-                    PlayerTake.run(game, winning_sets, guess)
+                    PlayerTake.run(game, board, winning_sets, guess)
                 end
             end
         rescue Timeout::Error
