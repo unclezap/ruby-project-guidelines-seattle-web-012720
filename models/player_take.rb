@@ -32,7 +32,7 @@ class PlayerTake
             DrawThree.run(game)
         elsif
             puts "Oh no! That's not a set.  The computer found one though."
-            sleep(2)
+            sleep(5)
             ComputerTake.run(game, winning_sets)
         end
     end

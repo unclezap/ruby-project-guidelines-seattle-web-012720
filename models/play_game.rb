@@ -176,7 +176,7 @@ class PlayGame
             PlayGame.start_game
         end
         puts `clear`
-        puts "To choose a set, use the QWER keys for the first row, the ASDF keys for the second row, and the ZXCV keys for the third row.  If there are more than 12 cards you can use the UIO keys for the fourth row."
+        puts "To choose a set, use the QWER keys for the first row, the ASDF keys for the second row, and the ZXCV keys for the third row.  If there are more than 12 cards you can use the UIOP keys for the fourth row."
         puts ""
         puts "       QWER"
         puts "       ASDF"

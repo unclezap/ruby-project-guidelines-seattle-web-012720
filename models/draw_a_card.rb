@@ -4,12 +4,14 @@ class DrawACard
         cards_in_deck = cards.find_all do |card|
             card[:in_deck] == true
         end
-        if cards_in_deck == nil
-            binding.pry
+        if cards_in_deck.length == 0
             WinLoseDraw.run(game)
         end
-        cards_in_deck.first[:on_board] = true
-        cards_in_deck.first[:in_deck] = false
+        drawn_card = cards_in_deck[0]
+        drawn_card[:on_board] = true
+        drawn_card[:in_deck] = false
+        drawn_card.save
+
         cards_on_board = cards.find_all do |card|
             card[:on_board] == true
         end

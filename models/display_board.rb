@@ -192,6 +192,7 @@ class DisplayBoard
             i += 1
         end
         puts image
+        puts "Computer's set in white"
         sleep(2)
     end
 end
