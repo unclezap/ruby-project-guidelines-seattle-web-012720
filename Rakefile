@@ -4,7 +4,8 @@ require 'sinatra/activerecord/rake'
 desc 'starts a console'
 task :console do
   [:seed]
-  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  # ActiveRecord::Base.logger = Logger.new(STDOUT)
+  # ActiveRecord::Base.logger = Logger.new(log.txt)
   Pry.start
 end
 

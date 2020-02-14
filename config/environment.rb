@@ -10,4 +10,6 @@ ActiveRecord::Base.establish_connection(
 
 require_all 'lib'
 
+  ActiveRecord::Base.logger = nil
+
 # Dir[File.join(File.dirname(__File__), "../app/models", "*.rb")].each {|j| require j}

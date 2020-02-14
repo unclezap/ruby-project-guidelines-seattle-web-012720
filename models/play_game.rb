@@ -118,7 +118,6 @@ class PlayGame
                             puts "Something's wrong.  Let's try again"
                             PlayGame.start_game
                         else
-                            binding.pry
                             GameTurn.run(game)
                         end
                     else

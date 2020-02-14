@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 5) do
     t.integer "player_id"
     t.integer "tricks_taken"
     t.integer "tricks_lost"
+    t.string "game_result"
+    t.integer "difficulty"
     t.index ["player_id"], name: "index_games_on_player_id"
   end
 
@@ -40,11 +42,13 @@ ActiveRecord::Schema.define(version: 5) do
   create_table "shuffles", force: :cascade do |t|
     t.integer "game_id"
     t.integer "card_id"
+    t.integer "list_id"
     t.boolean "on_board"
     t.boolean "in_deck"
-    t.boolean "taken"
+    t.string "taken"
     t.index ["card_id"], name: "index_shuffles_on_card_id"
     t.index ["game_id"], name: "index_shuffles_on_game_id"
+    t.index ["list_id"], name: "index_shuffles_on_list_id"
   end
 
 end

@@ -3,4 +3,6 @@ require 'timeout'
 
 StartMenu.run
 
-binding.pry
+puts `clear`
+puts "Goodbye!"
+gets
