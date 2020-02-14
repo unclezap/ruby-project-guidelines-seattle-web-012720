@@ -1,25 +1,28 @@
 class GameTurn
     def self.run(game)
-        # @game = game
         draw_results = DrawACard.run(game)
-        binding.pry
+        # binding.pry
+        board = draw_results[:cards_on_board]
+        winning_sets = draw_results[:takes]
         #[    Wait Until Unless function
-            x = Time.now
-
-            # require 'timeout'
-            # y = 10
-            # begin
-            # status = Timeout::timeout(y) {
-            #     puts x
-            #     printf "Input: "
-            #     gets
-            # }
-            # puts "Got: #{status}"
-            # rescue Timeout::Error
-            # puts "Input timed out after #{y} seconds"
-            # puts "Time.now is #{Time.now}"
-            # end
-        # ]
+        x = Time.now
+        y = 0.8 * game[:difficulty]
+        z = 0.4 * y * rand()
+        rand_time = y + z.round()
+        begin
+            status = Timeout::timeout(rand_time) do
+                puts "Choose your cards: "
+                cards = gets.chomp
+            end
+        rescue Timeout::Error
+                puts "Here is where your computer takes goes"
+                binding.pry
+        end 
+        # # puts "Got: #{status}"
+        # rescue Timeout::Error
+        # binding.pry
+        
+        # end
         # ComputerTake.run(game, set) || PlayerTake.run(game, set)
         
         GameTurn.run
