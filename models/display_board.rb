@@ -83,7 +83,6 @@ class DisplayBoard
             i += 1
         end
         puts image
-        binding.pry
     end
     
     def self.highlight_set(board_array,set)
@@ -193,7 +192,6 @@ class DisplayBoard
             i += 1
         end
         puts image
-        binding.pry
         sleep(2)
     end
 end

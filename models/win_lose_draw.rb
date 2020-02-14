@@ -7,6 +7,7 @@ class WinLoseDraw
         else
             game[game_result] = "draw"
         end
+        game.save
         if game[:game_result] == "win"
             Victory.run
         elsif game[:game_result] == "lose"

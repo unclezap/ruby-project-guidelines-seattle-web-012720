@@ -20,8 +20,8 @@ class GameTurn
                 end
             end
         rescue Timeout::Error
-                ComputerTake.run(game, winning_sets)
+                ComputerTake.run(game, board,winning_sets)
         end        
-        GameTurn.run
+        GameTurn.run(game)
     end
 end

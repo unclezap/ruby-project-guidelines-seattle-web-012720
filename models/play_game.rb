@@ -156,16 +156,16 @@ class PlayGame
         get_int_difficulty = get_difficulty.to_i
 
         if get_int_difficulty == 1 || get_difficulty == "one"
-            difficulty = 60
+            difficulty = 180
         elsif get_int_difficulty == 2 || get_difficulty == "two"
-            difficulty = 30
+            difficulty = 120
         elsif get_int_difficulty == 3 || get_difficulty == "three"
-            difficulty = 10
+            difficulty = 60
         elsif get_int_difficulty == 4 || get_difficulty == "four"
             puts "How many seconds on average do you want to identify a set?"
             difficulty_string = gets.chomp
             difficulty = difficulty_string.to_i
-            if difficulty < 2 || difficulty > 300
+            if difficulty < 2 || difficulty > 360
                 puts "That seems crazy.  I'm going to give you 30."
                 sleep(3)
                 difficulty = 30
