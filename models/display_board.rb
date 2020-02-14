@@ -2,10 +2,19 @@ class DisplayBoard
     def self.run(board_array)
         puts `clear`
         num_assignments = board_array.length
-        card_images = []
+        # card_images = []
         i = 0
         image = ""
         num_assignments.times do
+            #bugcatcher
+            if set[0] == nil || set[1] == nil || set[2] == nil || set.length != 3
+                binding.pry
+            end
+            catcher = board_array[i]
+            if catcher.card == nil
+                binding.pry
+            end
+            
             if board_array[i].card[:color] == 1
                 if board_array[i].card[:number] == 1
                     image += "1 ".yellow
@@ -88,10 +97,19 @@ class DisplayBoard
     def self.highlight_set(board_array,set)
         puts `clear`
         num_assignments = board_array.length
-        card_images = []
+        # card_images = []
         i = 0
         image = ""
         num_assignments.times do
+            #bugcatcher
+            if set[0] == nil || set[1] == nil || set[2] == nil || set.length != 3
+                binding.pry
+            end
+            catcher = board_array[i]
+            if catcher.card == nil
+                binding.pry
+            end
+
             if board_array[i].card[:color] == 1 && board_array[i].card != set[0] && board_array[i].card != set[1] && board_array[i].card != set[2]
                 if board_array[i].card[:number] == 1
                     image += "1 ".yellow
