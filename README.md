@@ -9,13 +9,14 @@ How to run this file:
 
 Note: this project must be played from a Mac computer running a recent OS.
 
-What does this program do?
 
+What does this program do?
+==============================
 This program plays a text version of the game Set, as well as provides data on player performance in the game.
 
 
 How to play Set
-
+==============================
 In the game set, you are presented with 12 or more cards that have shapes on them with four different qualities (number, color, shape, and shading). These qualities are represented in this game by three text symbols printed in one of three colors:
 
 1 A @
@@ -38,7 +39,7 @@ You can find an example set by selecting item 6. Example of a set from the start
 
 
 How to play this game
-
+==============================
 Select option 1. Play a game from the startup menu.  If you are a new player, you will be asked to create player profile and a tagline.  This tagline will be used to verify you for future games and to delete your player data if desired.
 
 From here, you will be asked to select a difficulty level.  Difficulty levels control how much time a player is alloted to select a set from the available cards.  A custom difficulty level function is also allowed for players who desire harder or easier games than allowed by the basic difficulty levels.
@@ -54,7 +55,7 @@ Z (third row, leftmost card)   X (third row, second leftmost card)   C (third ro
 U (fourth row, leftmost card)   I (fourth row, second leftmost card)   O (fourth row, second rightmost card)  P (fourth row, rightmost card)
 
 Other functions:
-
+==============================
 The high score menu (option 2. View high score from the startup menu) allows players to view the highest score achieved in the game, as well as the total number of games played in your copy of the game.  Further statistical analysis will be available in future versions of the game.
 
 The delete records menu (option 3. Delete records from the startup menu) allows players to delete their own player profiles or individual games they have played from the database.
@@ -62,11 +63,11 @@ The delete records menu (option 3. Delete records from the startup menu) allows 
 The change tagline menu (option 4. Change your tagline from the startup menu) allows players to change their taglines.  Players must know their taglines in order to change them.
 
 Special thanks and contributors:
-
+==============================
 Special thanks for this project goes to the creator of the Ruby gem "colorize," Michał Kalbarczyk, without whom this project would not be possible or, at least, gameplay would be more difficult.
 
 Future versions of this project will take advantage of the gems "rmagick" (created by Tim Hunter, Omer Bar-or, Benjamin Thomas, Moncef Maiza) and "catpix" (created by Radek Pazdera).  Thanks in advance to these creators.
 
 License
-
+==============================
 This project is licensed under the GNU GPL at https://www.gnu.org/licenses/gpl-3.0.en.html.
