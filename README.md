@@ -1,11 +1,11 @@
 How to run this file:
 ==============================
 1.  Clone this repo
-2.  From your console, run bundle install.
+2.  From your terminal, run bundle install.
     * You may encounter errors at this point.  If this happens, try deleting your Gemlock file and running bundle install again.
-3.  Create your database tables.  To do this, simply run rake db:migrate in the console.
-4.  Seed your database with card values.  This can be accomplished by running rake db:seed from the console.
-5.  To start the application, type in "ruby 'bin/run.rb' from the top-level file directory.
+3.  Create your database tables.  To do this, simply run rake db:migrate in the terminal.
+4.  Seed your database with card values.  This can be accomplished by running rake db:seed from the terminal.
+5.  To start the application, type in "ruby 'bin/run.rb' in the terminal from the top-level file directory of this project.
 
 Note: this project must be played from a Mac computer running a recent OS.
 
