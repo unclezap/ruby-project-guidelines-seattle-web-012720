@@ -71,9 +71,11 @@ Future versions of this project will take advantage of the gems "rmagick" (creat
 Screenshots
 ==============================
 ![Image description](https://github.com/unclezap/ruby-project-guidelines-seattle-web-012720/blob/master/Screen%20Shot%202020-02-18%20at%201.41.57%20PM.png?raw=true)
+
 Gameplay
 
 ![Image description](https://github.com/unclezap/ruby-project-guidelines-seattle-web-012720/blob/master/Screen%20Shot%202020-02-18%20at%201.42.43%20PM.png?raw=true)
+
 Startup menu
 
 License
