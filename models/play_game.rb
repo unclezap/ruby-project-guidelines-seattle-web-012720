@@ -167,7 +167,7 @@ class PlayGame
             puts "How many seconds on average do you want to identify a set?"
             difficulty_string = gets.chomp
             difficulty = difficulty_string.to_i
-            if difficulty < 2 || difficulty > 360
+            if difficulty < 1 || difficulty > 360
                 puts "That seems crazy.  I'm going to give you 30."
                 sleep(3)
                 difficulty = 30

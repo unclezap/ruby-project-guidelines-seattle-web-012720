@@ -1,5 +1,10 @@
 class GuessConverter
     def self.run(board, guess)
+        if guess == "exit"
+            begin
+                abort "Too hard, huh?"
+            end
+        end
         guess_array = guess.downcase.split('')
         if guess_array.length == 3
             i = 0
@@ -43,6 +48,7 @@ class GuessConverter
                 end
                 i += 1
             end
+            # binding.pry
             return card_array
         end
         dummy_card = Card.all.first

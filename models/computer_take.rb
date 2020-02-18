@@ -9,7 +9,7 @@ class ComputerTake
         i = i.round()
         set_taken = winning_sets[i]
         DisplayBoard.highlight_set(game, board, set_taken)
-        sleep(4)
+        sleep(2)
 
         #seven digit key is necessary to give <1% chance of matching keys in the same game over 100 games where one player takes all sets. Basically a birthday problem
         set_key = -9999999 * rand()

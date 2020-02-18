@@ -11,7 +11,8 @@ class DisplayBoard
             #     binding.pry
             # end
             catcher = board_array[i]
-            if catcher.card == nil
+            #originally if catcher.card == nil
+            if catcher == nil
                 binding.pry
             end
             
@@ -212,7 +213,7 @@ class DisplayBoard
 
 
         puts image
-        puts "Computer's set in white"
+        puts "Taken set in white"
         # sleep(2)
     end
 end

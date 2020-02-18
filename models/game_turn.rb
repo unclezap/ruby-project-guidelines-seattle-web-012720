@@ -13,7 +13,7 @@ class GameTurn
         rand_time = y + z.round()
         
         begin
-            status = Timeout::timeout(1) do 
+            status = Timeout::timeout(rand_time) do 
             # status = Timeout::timeout(rand_time) do
                 DisplayBoard.run(board)
                 puts "Choose your cards: "
@@ -24,7 +24,7 @@ class GameTurn
                 end
             end
         rescue Timeout::Error
-                ComputerTake.run(game, board,winning_sets)
+                ComputerTake.run(game, board, winning_sets)
         end        
         GameTurn.run(game)
     end
