@@ -62,7 +62,7 @@ The high score menu (option 2. View high score from the startup menu) allows pla
 
 The delete records menu (option 3. Delete records from the startup menu) allows players to delete their own player profiles or individual games they have played from the database.
 
-The change tagline menu (option 4. Change your tagline from the startup menu) allows players to change their taglines.  Players must know their taglines in order to change them.
+The change tagline menu (option 4. Change your tagline from the startup menu) allows players to change their taglines.
 
 Special thanks and contributors:
 ==============================
