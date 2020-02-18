@@ -61,6 +61,12 @@ The delete records menu (option 3. Delete records from the startup menu) allows 
 
 The change tagline menu (option 4. Change your tagline from the startup menu) allows players to change their taglines.  Players must know their taglines in order to change them.
 
+Special thanks and contributors:
+
+Special thanks for this project goes to the creator of the Ruby gem "colorize," Michał Kalbarczyk, without whom this project would not be possible or, at least, gameplay would be more difficult.
+
+Future versions of this project will take advantage of the gems "rmagick" (created by Tim Hunter, Omer Bar-or, Benjamin Thomas, Moncef Maiza) and "catpix" (created by Radek Pazdera).  Thanks in advance to these creators.
+
 License
 
 This project is licensed under the GNU GPL at https://www.gnu.org/licenses/gpl-3.0.en.html.
