@@ -83,9 +83,9 @@ Video of gameplay
 https://www.youtube.com/watch?v=W84gbOU2LHE
 
 Startup menu
-==============================
-Slideshow describing the creation of this game
 
+Slideshow describing the creation of this game
+==============================
 https://docs.google.com/presentation/d/1aVoLn8y9Xmwz8Nas8JzHWNTuvEAOpnjikg8fHgFkfAg/edit?usp=sharing
 
 License
