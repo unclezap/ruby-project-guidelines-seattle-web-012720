@@ -1,5 +1,5 @@
 How to run this file:
-
+==============================
 1.  Clone this repo
 2.  From your console, run bundle install.
     * You may encounter errors at this point.  If this happens, try deleting your Gemlock file and running bundle install again.
@@ -67,6 +67,10 @@ Special thanks and contributors:
 Special thanks for this project goes to the creator of the Ruby gem "colorize," Michał Kalbarczyk, without whom this project would not be possible or, at least, gameplay would be more difficult.
 
 Future versions of this project will take advantage of the gems "rmagick" (created by Tim Hunter, Omer Bar-or, Benjamin Thomas, Moncef Maiza) and "catpix" (created by Radek Pazdera).  Thanks in advance to these creators.
+
+Screenshots
+==============================
+
 
 License
 ==============================
