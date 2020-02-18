@@ -44,7 +44,7 @@ Select option 1. Play a game from the startup menu.  If you are a new player, yo
 
 From here, you will be asked to select a difficulty level.  Difficulty levels control how much time a player is alloted to select a set from the available cards.  A custom difficulty level function is also allowed for players who desire harder or easier games than allowed by the basic difficulty levels.
 
-Once you begin play, you can collect sets by entering three keys corresponding with card locations.  The first row of cards can be taken by typing the corresponding letter on the QWER row of the keyboard.  The second row corresponds to the ASDF keys and the third row corresponds to the ZXCV keys.  If a fourth row is added, these cards can be selected with the UIOP keys.  Here is a visual reference:
+Once you begin play, you can collect sets by entering three keys corresponding with card locations and pressing return.  The first row of cards can be taken by typing the corresponding letter on the QWER row of the keyboard.  The second row corresponds to the ASDF keys and the third row corresponds to the ZXCV keys.  If a fourth row is added, these cards can be selected with the UIOP keys.  Here is a visual reference:
 
 Q (first row, leftmost card)   W (first row, second leftmost card)   E (first row, second rightmost card)  R (first row, rightmost card)
 
@@ -53,6 +53,8 @@ A (second row, leftmost card)   S (second row, second leftmost card)   D (second
 Z (third row, leftmost card)   X (third row, second leftmost card)   C (third row, second rightmost card)  V (third row, rightmost card)
 
 U (fourth row, leftmost card)   I (fourth row, second leftmost card)   O (fourth row, second rightmost card)  P (fourth row, rightmost card)
+
+Gameplay can be exited at any time by typing in "exit" and pressing return.
 
 Other functions:
 ==============================
