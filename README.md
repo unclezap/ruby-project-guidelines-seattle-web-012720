@@ -7,6 +7,7 @@ How to run this file:
 4.  Seed your database with card values.  This can be accomplished by running rake db:seed from the console.
 5.  To start the application, type in "ruby 'bin/run.rb' from the top-level file directory.
 
+Note: this project must be played from a Mac computer running a recent OS.
 
 What does this program do?
 
@@ -59,3 +60,7 @@ The high score menu (option 2. View high score from the startup menu) allows pla
 The delete records menu (option 3. Delete records from the startup menu) allows players to delete their own player profiles or individual games they have played from the database.
 
 The change tagline menu (option 4. Change your tagline from the startup menu) allows players to change their taglines.  Players must know their taglines in order to change them.
+
+License
+
+This project is licensed under the GNU GPL at https://www.gnu.org/licenses/gpl-3.0.en.html.
