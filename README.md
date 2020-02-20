@@ -27,13 +27,21 @@ etc.
 
 Your task is to identify three "cards" that, for each quality, are either all matching or all different.  Three such cards are known as a "set."  Here is an example set:
 
-1 A @     2 A #     3 A $
+1 A @     
+
+2 A #     
+
+3 A $
 
 The first and third qualities (the numbers and symbols) are different for each card, while the second quality (the letter) remains the same for each.  For this example, assume that the colors of each card are also either all different or all the same.
 
 The following is not a set because the number qualities are the same for the first two cards, but different from the third:
 
-1 A @    1 B @      3 C @
+1 A @
+
+1 B @
+
+3 C @
 
 You can find an example set by selecting item 6. Example of a set from the startup menu of the game.
 
