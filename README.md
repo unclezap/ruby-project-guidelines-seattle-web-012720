@@ -86,11 +86,11 @@ Gameplay
 
 ![Image description](https://github.com/unclezap/ruby-project-guidelines-seattle-web-012720/blob/master/Screen%20Shot%202020-02-18%20at%201.42.43%20PM.png?raw=true)
 
+Startup menu
+
 Video of gameplay
 ==============================
 https://www.youtube.com/watch?v=W84gbOU2LHE
-
-Startup menu
 
 Slideshow describing the creation of this game
 ==============================
