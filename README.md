@@ -62,7 +62,7 @@ Z (third row, leftmost card)   X (third row, second leftmost card)   C (third ro
 
 U (fourth row, leftmost card)   I (fourth row, second leftmost card)   O (fourth row, second rightmost card)  P (fourth row, rightmost card)
 
-Gameplay can be exited at any time by typing in "exit" and pressing return.
+Gameplay can be exited at any time by typing in "exit" and pressing return.  Selecting option 5. Quickrun from the startup menu will allow a player to resume their game.
 
 Other functions:
 ==============================
